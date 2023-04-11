@@ -1,0 +1,39 @@
+CreateTraining : width : 4 , height : 4 , type :RGB
+Input: image:./cuttedImages/br0/br0.jpg, identity:sretan
+Input: image:./cuttedImages/br0/br1.jpg, identity:tuzan
+Input: image:./cuttedImages/br0/br2.jpg, identity:flat
+Input: image:./cuttedImages/br0/br3.jpg, identity:upsideDown
+Input: image:./cuttedImages/br0/br4.jpg, identity:wink
+Input: image:./cuttedImages/br0/br5.jpg, identity:noMouth
+Input: image:./cuttedImages/br0/br6.jpg, identity:surprised
+Input: image:./cuttedImages/br1/br0.jpg, identity:cool
+Input: image:./cuttedImages/br1/br1.jpg, identity:nerd
+Input: image:./cuttedImages/br1/br2.jpg, identity:heartEye
+Input: image:./cuttedImages/br1/br3.jpg, identity:laughCry
+Input: image:./cuttedImages/br1/br4.jpg, identity:star
+Input: image:./cuttedImages/br0/br5.jpg, identity:sleep
+Input: image:./cuttedImages/br0/br6.jpg, identity:salute
+Input: image:./cuttedImages/br2/br0.jpg, identity:catLaugh
+Input: image:./cuttedImages/br2/br1.jpg, identity:catLaughCry
+Input: image:./cuttedImages/br2/br2.jpg, identity:catLove
+Input: image:./cuttedImages/br2/br3.jpg, identity:catKiss
+Input: image:./cuttedImages/br2/br4.jpg, identity:catSurprised
+Input: image:./cuttedImages/br0/br5.jpg, identity:catCry
+Input: image:./cuttedImages/br0/br6.jpg, identity:catAngry
+Input: image:./cuttedImages/br3/br0.jpg, identity:left
+Input: image:./cuttedImages/br3/br1.jpg, identity:right
+Input: image:./cuttedImages/br3/br2.jpg, identity:up
+Input: image:./cuttedImages/br3/br3.jpg, identity:down
+Input: image:./cuttedImages/br3/br4.jpg, identity:highFive
+Input: image:./cuttedImages/br0/br5.jpg, identity:handShake
+Input: image:./cuttedImages/br0/br6.jpg, identity:pray
+Network: hidden1:50, hidden2:5
+Train: Mode:, Minutes:1, StrategyError:0.1,StrategyCycles:150
+Whatis: image:./test/br0.jpg
+Whatis: image:./test/br1.jpg
+Whatis: image:./test/br2.jpg
+Whatis: image:./test/br3.jpg
+Whatis: image:./test/br4.jpg
+Whatis: image:./test/br5.jpg
+Whatis: image:./test/br6.jpg
+Whatis: image:./test/br7.jpg

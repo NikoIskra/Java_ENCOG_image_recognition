@@ -25,10 +25,9 @@ import java.util.*;
 import java.util.List;
 
 public class Main {
-
     private int epohCount = 0;
     public static void main(final String args[]) {
-        int trainingCount = new File("emojis/").listFiles().length;
+        int trainingCount = 4;
         for(int i=0;i<trainingCount;i++){
             try {
                 imageImport(i);
@@ -38,7 +37,7 @@ public class Main {
         }
         try {
             Main program = new Main();
-            program.execute("trening.txt");
+            program.execute("NeuralNetworkEmoji/trening.txt");
         } catch (final Exception e) {
             e.printStackTrace();
         }
@@ -51,7 +50,7 @@ public class Main {
             System.out.println("Datoteka br"+index+" vec postoji!");
         }else {
             String extension = ".jpg";
-            File file = new File("emojis/br" + index + extension);
+            File file = new File("NeuralNetworkEmoji/emojis/br" + index + extension);
             BufferedImage image = ImageIO.read(file);
             int emojiWidth = image.getWidth() / 7;
             int emojiHeight = image.getHeight();
@@ -267,7 +266,7 @@ public class Main {
         String result = "";
         for (int i = 0; i < emojis.length; i++) {
             final Image img = emojis[i];
-            ImageIO.write(emojis[i], "jpg", new File("cuttedImages/currentEmoji/" + "br" + i + ".jpg"));
+            ImageIO.write(emojis[i], "jpg", new File("cuttedImages/currentEmoji/" + "/br" + i + ".jpg"));
             final ImageMLData input = new ImageMLData(img);
             input.downsample(this.downsample, false, this.downsampleHeight, this.downsampleWidth, 1, -1);
             final int winner = this.network.winner(input);
